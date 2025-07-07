@@ -82,13 +82,13 @@ Post-SCITT compliant products support compliance management with legal, regulato
 
 {::boilerplate bcp14-tagged}
 
-# Generic Proglem Statement
+# Generic Problem Statement
 
 Supply chain security is a crucial requirement for ensuring the stable supply of materials that directly impact consumer survival and those widely used by the majority of consumers, while minimizing threats related to the economy, public health, and safety.
 As an extension of discussions in the physical domain, the definition of software supply chain security in the cyber domain, {{SoK-SW-SCS}}, has been established.
 This is due to the numerous supply chain attacks targeting vulnerabilities in the software supply chain that have been experienced globally, as well as the academic progress in analyzing these attack vectors.
 This analysis can also be applied to the supply chains of computer systems, which include both hardware and software.
-Supply chain attacks on computer systems typically involve attackers gaining initial access, making malicious changes upstream in the supply chain, and exploiting vulnerabilities in downstream systems that are already in operation.
+Supply chain attacks on computer systems typically involve attackers gaining initial access, making malicious changes upstream in the supply chain, and exploiting vulnerabilities in the downstream systems that are already in operation.
 
 
 The SCITT Architecture {{-SCITT-ARCH}} defines the core objects, identifiers and workflows necessary to interact with a SCITT Transparency Service:
@@ -105,11 +105,11 @@ The extended YANG data model with transparency schemers {{RFC9472}} defines sche
 - SBOM Information
 - Vulnerability Information
 
-As described above, specifications for software supply chain security are maturing; however, it remains unclear whether exisiting standard specifications can be followed while also encompassing a scope that extends beyond software.
+As described above, specifications for software supply chain security are maturing; however, it remains unclear whether existing standard specifications can be followed while also encompassing a scope that extends beyond software.
 
 ## Computational Supply Chain Use Cases
 
-### Multi Software Stack and Computer Architecture
+### Multi-Software Stack and Computer Architecture
 
 Software integration is an essential task in building computer systems.
 The ecosystemization of software development is advancing, a process that involves procuring various software components from multiple suppliers at different layers and creating packages of varying sizes.
@@ -118,17 +118,17 @@ Furthermore, depending on the design, there may be cases where components are no
 Additionally, modern computer systems adopt a variety of architectures and infrastructures.
 Similar to the increasing complexity of software stacks, computer architectures continue to evolve to keep pace with advancements in applications and hardware.
 
-End-consummers want:
+End-consumers want:
 
-- all hardware and software components required to build a computer system are displayed
+- all hardware and software components required to build a computer systems are displayed
 - the ability to identify and retrieve all components from a secure and tamper-proof location  - to receive an alert when a vulnerability scan detects a known security issue on a running component
-- verifiable proofs on build process and build environment with all supplier tiers to ensure end to end build quality and security
+- verifiable proofs on build process and build environment with all supplier tiers to ensure end-to-end build quality and security
 
 SCITT provides a standardized way to:
 
 - provide a tiered and transparent framework that allows for verification of integrity and authenticity of the integrated hardware and software at both component and product level before using
 - notify hardware and software integrators of vulnerabilities identified during security scans of running components
-- provide valid annotstions on build integrity to ensure conformance
+- provide valid annotations on build integrity to ensure conformance
 - provide an interface that reconciles the division of responsibilities between the software and hardware sides
 
 
