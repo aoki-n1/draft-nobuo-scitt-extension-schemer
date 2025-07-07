@@ -4,9 +4,9 @@
 ################################
 v: 3
 
-title: Supply Chain Use Cases to Design Secure Computing Systems for SCITT Extention
+title: Supply Chain Use Cases to Design Secure Computing Systems for SCITT Extension
 abbrev: SCITT Extension Supply Chain
-docname: draft-nobuo-scitt-use-cases-extension-latest
+docname: draft-nobuo-scitt-use-cases-extension-00
 #docname: draft-ietf-scitt-scrapi-latest
 #nobuo-scitt-extension-use-cases-latest
 
