@@ -6,7 +6,7 @@ v: 3
 
 title: A YANG Data Model for Multi-Statements of SCITT
 abbrev: SCITT Extension Supply Chain
-docname: draft-nobuo-scitt-use-cases-extension-latest
+docname: draft-nobuo-scitt-extension-schemer-latest
 #docname: draft-ietf-scitt-scrapi-latest
 #nobuo-scitt-extension-use-cases-latest
 
@@ -29,7 +29,7 @@ kramdown_options:
 venue:
   group: SCITT
   mail: scitt@ietf.org
-  github: aoki-n1/draft-nobuo-scitt-use-cases-extension ## check
+  github: aoki-n1/draft-nobuo-scitt-extension-schemer ## check
 
 ################################
 # author
@@ -73,7 +73,7 @@ Various formats exist for SBOMs, including Software Package Data Exchange [SPDX]
 
 SCITT ARCH provides supply chain information by issuing receipts for each stage of the software lifecycle.
 
-A computer is an aggregate of hardware, software, and configuration. 
+A computer is an aggregate of hardware, software, and configuration.
 Providing supply chain information using the above method results in multiple statements.
 This draft specifies the means by which integrated multi-statements can be advertised and retrieved.
 
@@ -84,7 +84,7 @@ The mechanisms specified in this document are meant to satisfy several use cases
 
  - The software layer management system acquires integrated multi-statements from the virtualization infrastructure as part of its continuous lifecycle. This multi-layer software is evaluated to determine whether it can be consistently delivered to consumers as a transparent, integrated product.
 
-To fulfill these key use cases, integrated statements may be verified using one of the following methods. 
+To fulfill these key use cases, integrated statements may be verified using one of the following methods.
 
 
 ## Terminology {#terms}
@@ -108,7 +108,7 @@ The following is discussion to be removed at time of after the SCITT WG adopted.
 
 This draft does not affect the RFCization process of the SCITT Architecture and SCRAPI. While awaiting the two starter specifications' RFCization, we will progressively mature this draft. During this period, we will focus on use cases that can foster broad consensus and on the data model's scope.
 
-TODO. 
+TODO.
 
 # Privacy Considerations
 
