@@ -4,9 +4,9 @@
 ################################
 v: 3
 
-title: Supply Chain Use Cases to Design Secure Computing Systems for SCITT Extension
+title: A YANG Data Model for Multi-Statements of SCITT
 abbrev: SCITT Extension Supply Chain
-docname: draft-nobuo-scitt-use-cases-extension-00
+docname: draft-nobuo-scitt-use-cases-extension-latest
 #docname: draft-ietf-scitt-scrapi-latest
 #nobuo-scitt-extension-use-cases-latest
 
@@ -62,75 +62,53 @@ informative:
 
 --- abstract
 
-This document includes a collection of representative Computational Supply Chain Use Cases.
-These use cases aim to identify computational supply chain problems that the industry faces today and act as a guideline for developing a comprehensive security architecture  and solutions for these scenarios.
+This document defines components, as represented by Software Bills of Materials (SBOMs); statements protecting the transparent lifecycle of those components; and alternative means for acquiring integrated Supply Chain information, including provenance and configuration details.
 
 --- middle
 
 # Introduction
 
-Supply chain for components that make up a computer system consists of the entire lifecycle, including hardware selection, system design, development, build, integration, deployment, and maintenance.
-In the software supply chain, SBOM and SCITT architecture are exemplary initiatives that enhance software transparency.
-Discussions focusing on hardware and its interfaces are also beginning.
-These supply chain security measures are expected to reduce the complexity of software and provide visibility into its lifecycle, thereby reducing the number of cyber threats that can cause harmful effects such as risks related to the system's attack surface, data leaks, business disruptions, damage to reputation, intellectual property, and financial assets.
-On the other hand, thorough supply chain security for computer systems can only be achieved by integrating support from hardware to the software stack, enabling effective risk assessment and mitigation.
-Modern computer systems are influenced by evolving computer architectures and increasingly complex software stacks, making the integrated management of components not always straightforward.
-End users, such as consumers, need to be able to evaluate whether suppliers maintain appropriate security practices without requiring access to proprietary intellectual property, necessitating an evolutionary extension of the SCITT specification.
-Post-SCITT compliant products support compliance management with legal, regulatory, and technical requirements (often differing but overlapping and interrelated), risk assessment, and detection of supply chain attacks throughout the entire lifecycle, prioritizing data privacy.
+A Software Bill of Materials (SBOM) describes the software contained within a device (including version management and dependencies), while a Hardware Bill of Materials (HBOM) describes the hardware contained within a device. Additionally, an XBOM exists.
+Various formats exist for SBOMs, including Software Package Data Exchange [SPDX], Software Identity Tags [SWID], and CycloneDX [CycloneDX12].
+
+SCITT ARCH provides supply chain information by issuing receipts for each stage of the software lifecycle.
+
+A computer is an aggregate of hardware, software, and configuration. 
+Providing supply chain information using the above method results in multiple statements.
+This draft specifies the means by which integrated multi-statements can be advertised and retrieved.
+
+The mechanisms specified in this document are meant to satisfy several use cases:
+
+ - The hardware management system acquires integrated multi-statements from data center infrastructure devices and IoT devices as part of a continuous lifecycle.
+ It evaluates whether the acquired integrated multi-statements can be used to correctly establish the Root of Trust.
+
+ - The software layer management system acquires integrated multi-statements from the virtualization infrastructure as part of its continuous lifecycle. This multi-layer software is evaluated to determine whether it can be consistently delivered to consumers as a transparent, integrated product.
+
+To fulfill these key use cases, integrated statements may be verified using one of the following methods. 
+
 
 ## Terminology {#terms}
 
 {::boilerplate bcp14-tagged}
 
-# Generic Problem Statement
+## Statement formats
 
-Supply chain security is a crucial requirement for ensuring the stable supply of materials that directly impact consumer survival and those widely used by the majority of consumers, while minimizing threats related to the economy, public health, and safety.
-As an extension of discussions in the physical domain, the definition of software supply chain security in the cyber domain, {{SoK-SW-SCS}}, has been established.
-This is due to the numerous supply chain attacks targeting vulnerabilities in the software supply chain that have been experienced globally, as well as the academic progress in analyzing these attack vectors.
-This analysis can also be applied to the supply chains of computer systems, which include both hardware and software.
-Supply chain attacks on computer systems typically involve attackers gaining initial access, making malicious changes upstream in the supply chain, and exploiting vulnerabilities in the downstream systems that are already in operation.
+As abstracted in SCITT Architecture　{{-SCITT-ARCH}}, this draft also does not refer to the internal format of XBOM or Provence, treating them entirely as statements.
 
+## Discussion points
+The following is discussion to be removed at time of RFC publication.
 
-The SCITT Architecture {{-SCITT-ARCH}} defines the core objects, identifiers and workflows necessary to interact with a SCITT Transparency Service:
-
-- Signed Statements
-- Receipts
-- Transparent Statements
-- Registration Policies
+ - Is the model structure suitable for partially or comprehensively representing tree structures like computer systems?
+ - Are there field names adopted in widely accepted models?
 
 
-The extended YANG data model with transparency schemers {{RFC9472}} defines schemers for mapping SBOMs and vulnerability information.
+## The multi-statements schemer model extension
 
-- Access Control Lists
-- SBOM Information
-- Vulnerability Information
+The following is discussion to be removed at time of after the SCITT WG adopted.
 
-As described above, specifications for software supply chain security are maturing; however, it remains unclear whether existing standard specifications can be followed while also encompassing a scope that extends beyond software.
+This draft does not affect the RFCization process of the SCITT Architecture and SCRAPI. While awaiting the two starter specifications' RFCization, we will progressively mature this draft. During this period, we will focus on use cases that can foster broad consensus and on the data model's scope.
 
-## Computational Supply Chain Use Cases
-
-### Multi-Software Stack and Computer Architecture
-
-Software integration is an essential task in building computer systems.
-The ecosystemization of software development is advancing, a process that involves procuring various software components from multiple suppliers at different layers and creating packages of varying sizes.
-These include a considerable number of third-party components.
-Furthermore, depending on the design, there may be cases where components are not strictly separated from one another.
-Additionally, modern computer systems adopt a variety of architectures and infrastructures.
-Similar to the increasing complexity of software stacks, computer architectures continue to evolve to keep pace with advancements in applications and hardware.
-
-End-consumers want:
-
-- all hardware and software components required to build a computer systems are displayed
-- the ability to identify and retrieve all components from a secure and tamper-proof location  - to receive an alert when a vulnerability scan detects a known security issue on a running component
-- verifiable proofs on build process and build environment with all supplier tiers to ensure end-to-end build quality and security
-
-SCITT provides a standardized way to:
-
-- provide a tiered and transparent framework that allows for verification of integrity and authenticity of the integrated hardware and software at both component and product level before using
-- notify hardware and software integrators of vulnerabilities identified during security scans of running components
-- provide valid annotations on build integrity to ensure conformance
-- provide an interface that reconciles the division of responsibilities between the software and hardware sides
-
+TODO. 
 
 # Privacy Considerations
 
