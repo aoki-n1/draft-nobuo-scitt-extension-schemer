@@ -1,4 +1,4 @@
-# Supply Chain Use Cases to Design Secure Computing Systems for SCITT Extention
+# A YANG Data Model for Multi-Statements of SCITT
 
 This is an individual Internet-Draft, "A YANG Data Model for Multi-Statements of SCITT".
 
